@@ -28,6 +28,7 @@
                                             <td>
                                                 <form action="{{route('contoh.destroy', $item->id)}}" method="POST">
                                                     @csrf
+                                                    <a href="{{route('contoh.show', $item->id)}}" class="btn btn-info">Show</a>
                                                     <a href="{{route('contoh.edit', $item->id)}}" class="btn btn-secondary">Edit</a>
 
                                                     @method('DELETE')

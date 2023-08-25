@@ -20,7 +20,7 @@ class ContohController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create($id)
+    public function create()
     {
         //        
         return view('contoh.create');
@@ -43,9 +43,11 @@ class ContohController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(contoh $contoh)
+    public function show(contoh $contoh, $id)
     {
         //
+        $contoh = contoh::find($id);
+        return view('contoh.show', compact('contoh'));
     }
 
     /**
